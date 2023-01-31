@@ -1,4 +1,4 @@
-# effective-octo-memory
+# test to change depo name
 
 I am just trying to learn how to use Github. 
 
