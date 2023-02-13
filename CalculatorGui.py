@@ -10,8 +10,25 @@ e.grid(row=0, column=0, padx=10, pady=5, columnspan=3)
 #e.insert(0, "Enter Your Name:")
 
 def click(number):
-    e.delete(0, 10)
-    e.insert(0, number)
+    #e.delete(0, 10)
+    t = e.get()
+    t += str(number)
+    e.delete(0, 100)
+    e.insert(0, t)
+
+def add():
+    global t
+    t = str(e.get())+" + "
+    e.delete(0, 25)
+
+
+def equals():
+    answer = eval(t + str(e.get()))
+    e.delete(0, 25)
+    e.insert(0, answer)
+
+def clear():
+    e.delete(0, 100)
 
 b1= tk.Button(root, text="1", padx=40, pady=20, command=lambda: click(1))
 b2= tk.Button(root, text="2", padx=40, pady=20, command=lambda: click(2))
